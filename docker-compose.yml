@@ -1,0 +1,31 @@
+name: call-of-the-taiga
+
+services:
+  call-of-the-taiga-app:
+    container_name: call-of-the-taiga-app
+    user: app
+    build:
+      args:
+        - BUILD_TYPE=dev
+        - PUID=1000
+        - PGID=1000
+        - DEV_XDEBUG_AUTOSTART=trigger
+    environment:
+      - PHP_IDE_CONFIG=serverName=Docker
+    volumes:
+      - ./:/var/www/call-of-the-taiga:cached
+      - ./docker/nginx/dev/call-of-the-taiga.local.crt:/etc/nginx/ssl/call-of-the-taiga.local.crt
+      - ./docker/nginx/dev/call-of-the-taiga.local.key:/etc/nginx/ssl/call-of-the-taiga.local.key
+      - ./docker/supervisor/supervisord-dev.conf:/etc/supervisord.conf
+    ports:
+      - "8080:8080" # Dev mode(backend) - Deprecated
+      - "5173:5173" # Dev mode(frontend) - Deprecated
+      - "10011:8080" # Prod mode emulation - Deprecated
+      - "80:8080" # Dev mode(for cookies setup)
+      - "443:4430" # Dev mode(for cookies setup)
+    networks:
+      - call-of-the-taiga-network
+
+networks:
+  call-of-the-taiga-network:
+    name: call-of-the-taiga-network
