@@ -1,9 +1,3 @@
-FROM registry.gitlab.com/sdt7772416/infrastructure/node-alpha:latest AS build-frontend
-
-COPY assets/ /app
-WORKDIR /app
-RUN corepack enable && yarn set version from sources && yarn --immutable && yarn install && yarn build
-
 FROM php:8.3-fpm-alpine AS parent-call-of-the-taiga-php-fpm
 
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
@@ -41,18 +35,13 @@ COPY ./docker/php/conf.d/*.ini /usr/local/etc/php/conf.d/
 COPY ./docker/php/fpm-conf.d/*.conf /usr/local/etc/php-fpm.d/
 USER app
 COPY --chown=app:app . /var/www/call-of-the-taiga
-COPY --from=build-frontend /app/dist /var/www/call-of-the-taiga/assets/dist
 WORKDIR /var/www/call-of-the-taiga
 
-RUN if [ "${BUILD_TYPE}" = "dev" ]; then cd assets && yarn set version from sources; fi && \
-    if [ "${BUILD_TYPE}" = "dist" ]; then \
+RUN if [ "${BUILD_TYPE}" = "dist" ]; then \
       composer install --no-dev && \
       chmod -R g+w var && chgrp -R www-data var && mkdir config/jwt && rm -rf /home/app/.npm /home/app/.composer; \
     fi;
 
 EXPOSE 8080
-
-# 100000 microseconds = 0.1 seconds
-ENV COLLECT_INTERVAL_IN_MICROSECONDS=100000
 
 CMD ["supervisord"]

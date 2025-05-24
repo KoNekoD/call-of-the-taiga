@@ -18,11 +18,8 @@ services:
       - ./docker/nginx/dev/call-of-the-taiga.local.key:/etc/nginx/ssl/call-of-the-taiga.local.key
       - ./docker/supervisor/supervisord-dev.conf:/etc/supervisord.conf
     ports:
-      - "8080:8080" # Dev mode(backend) - Deprecated
-      - "5173:5173" # Dev mode(frontend) - Deprecated
-      - "10011:8080" # Prod mode emulation - Deprecated
-      - "80:8080" # Dev mode(for cookies setup)
-      - "443:4430" # Dev mode(for cookies setup)
+      - "80:8080"
+      - "443:4430"
     networks:
       - call-of-the-taiga-network
 

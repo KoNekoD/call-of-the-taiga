@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <title>Услуги</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav class="header__nav">
+            <div class="logo__item">
+                <a href="{{ path('app_home_index') }}" class="link__logo">
+                    <img src="{{ asset('img/home.svg') }}" alt="logo" class="logo">
+                    <div class="logo__title">ЗОВ ТАЙГИ</div>
+                </a>
+
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="#main__wrap-about">О нас</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="{{ path('app_services_index') }}">Услуги</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#galery">Галерея</a>
+                </li>
+                <li class="nav__item" >
+                    <a class="nav__link" href="#fitback">Отзывы</a>
+                </li>
+                <li class="nav__item" >
+                    <a class="nav__link" href="#footer__soci">Контакты</a>
+                </li>
+                <li>
+                    <a href="{{ path('app_reservations_index') }}" class="nav__button-link">
+                        <button class="nav__button">Бронирование</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="head__title">Наши услуги</h1>
+
+        <main class="experience">
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card">
+                    <div class="experience-card__image">
+                        <img src="{{ asset('img/taiga.jpg') }}" alt="Выезд к оленям в лесу">
+                    </div>
+
+                    <div class="experience-card__content">
+                        <h2 class="experience-card__title"> Проживание у нас</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                            Предоставляем услугу  проживания на территории базы с
+                            возможностью посещения смотровой площадки за животными,
+                        </p>
+
+                        <div class="experience-card__hidden">
+                            <button class="experience-card__button">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card">
+                    <div class="experience-card__image">
+                        <img src="{{ asset('img/los.jpg') }}" alt="Выезд к оленям в лесу">
+                    </div>
+
+                    <div class="experience-card__content">
+                        <h2 class="experience-card__title">Охота</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                            Для любителей активного отдыха в дикой природе предлагаем организованный выезд в лес на ружейную охоту на копытных и пернатую дичь
+                        </p>
+
+                        <div class="experience-card__hidden">
+                            <button class="experience-card__button">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card">
+                    <div class="experience-card__image">
+                        <img src="{{ asset('img/olenu.jpeg') }}" alt="Выезд к оленям в лесу">
+                    </div>
+
+                    <div class="experience-card__content">
+                        <h2 class="experience-card__title">ВЫЕЗД К ОЛЕНЯМ В ЛЕС</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                            Завораживающей частью нашей базой отдыха
+                            является отгороженная территория леса с
+                            величественными марапами и пятнистыми оленями...
+                        </p>
+
+                        <div class="experience-card__hidden">
+                            <button class="experience-card__button">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card">
+                    <div class="experience-card__image">
+                        <img src="{{ asset('img/car.webp') }}" alt="Выезд к оленям в лесу">
+                    </div>
+
+                    <div class="experience-card__content">
+                        <h2 class="experience-card__title">Экскурсия</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                            Предлагаем организованным коллективам познакомиться с
+                            миром дикой природы.
+                            Запланируйте групповую поездку к нам и
+                            подарите детям незабываемые эмоции!
+                        </p>
+
+                        <div class="experience-card__hidden">
+                            <button class="experience-card__button">Забронировать</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </main>
+        <h2 class="head__subtitle">Услуги, входящие в дневное пребывание:</h2>
+
+
+        <main class="experience">
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card-two">
+                    <div class="experience-card__image-two">
+                        <img src="{{ asset('img/seek.jpg') }}" alt="">
+                    </div>
+                    <div class="experience-card__content-two">
+                        <h2 class="experience-card__title"> СМОТРОВАЯ ЗА ЖИВОТНЫМИ</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                        </p>
+                        <div class="experience-card__hidden-two">
+                            <div class="card__button-title">
+                                Предлагаем наслаждаться грацией оленей и маралов со специально
+                                отгороженного участка. Лавочки под навесом защитят от непогоды,
+                                создавая комфортное пространство для наблюдения за природой
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card-two">
+                    <div class="experience-card__image-two">
+                        <img src="{{ asset('img/fising.jpg') }}" alt="">
+                    </div>
+                    <div class="experience-card__content-two">
+                        <h2 class="experience-card__title"> Рыбалка</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                        </p>
+                        <div class="experience-card__hidden-two">
+                            <div class="card__button-title">
+                                Отправляясь на рыбалку в наших местах, вы погрузитесь
+                                в атмосферу настоящего умиротворения.
+                                Чистый воздух, наполненный ароматом хвои и свежести водоёма,
+                                поможет забыть о городской суете и полностью расслабиться.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card-two">
+                    <div class="experience-card__image-two">
+                        <img src="{{ asset('img/plah.jpeg') }}" alt="">
+                    </div>
+                    <div class="experience-card__content-two">
+                        <h2 class="experience-card__title"> Пляж</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                        </p>
+                        <div class="experience-card__hidden-two">
+                            <div class="card__button-title">
+                                В тёплое время года предлагаем  нашим гостям
+                                отдохнуть на берегу собственного пруда.
+                                Для комфортного размещения будут доступны шезлонги, крема, очки для плавания
+                                и всё что нужно для комфортного пребывания на пляже.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="experience__wrap" href="{{ path('app_reservations_index') }}">
+                <div class="experience-card-two">
+                    <div class="experience-card__image-two">
+                        <img src="{{ asset('img/footbal.jpg') }}" alt="">
+                    </div>
+
+                    <div class="experience-card__content-two">
+                        <h2 class="experience-card__title"> Футбольное поле</h2>
+                        <div class="experience-card__divider"></div>
+                        <p class="experience-card__description">
+                        </p>
+                        <div class="experience-card__hidden-two">
+                            <div class="card__button-title">
+                                На территории турбазы находится футбольное поле.
+                                Это отличная возможность для спортивного досуга:
+                                сыграть в мяч с друзьями или разыграть полноценные соревнования.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </main>
+    </div>
+</header>
+<hr>
+<footer class="footer footer__inner" id="footer__soci">
+    <ul class="footer__list">
+        <li class="footer__item"> <a href="#main__wrap-about" class="footer__link">О нас</a></li>
+        <li class="footer__item"> <a href="{{ path('app_services_index') }}" class="footer__link">Услуги</a></li>
+        <li class="footer__item"> <a href="#galery" class="footer__link">Галерея</a></li>
+        <li class="footer__item"> <a href="#fitback" class="footer__link">Отзывы</a></li>
+        <li class="footer__item"> <a href="#" class="footer__link">Политика конфиденциальности</a></li>
+        <li class="footer__item"> <a href="#" class="footer__socials">
+                <div class="footer__socials-wrap">
+                    <img src="{{ asset('img/tg.svg') }}" class="footer__img-tg" alt="">
+                    <div class="footer__socials-title">Мы в Телеграмм</div>
+                </div>
+            </a></li>
+        <li class="footer__item"> <a href="#" class="footer__socials">
+                <div class="footer__socials-wrap">
+                    <img src="{{ asset('img/vk.svg') }}" class="footer__img-vk footer__img" alt="">
+                    <div class="footer__socials-title">Мы в Вконтакте</div>
+                </div></a></li>
+    </ul>
+</footer>
+</body>
+</html>

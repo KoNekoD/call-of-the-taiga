@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <title>Главная</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css ">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr "></script>
+</head>
+<body>
+<div class="wrapper">
+    <section class="main__back">
+        <header class="header">
+            <div class="container">
+                <div class="header__nav-wrap">
+                    <nav class="header__nav">
+                        <div class="logo__item">
+                            <a href="{{ path('app_home_index') }}" class="link__logo">
+                                <img src="{{ asset('img/home.svg') }}" alt="logo" class="logo">
+                                <div class="logo__title">ЗОВ ТАЙГИ</div>
+                            </a>
+
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="#main__wrap-about">О нас</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="{{ path('app_services_index') }}">Услуги</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#galery">Галерея</a>
+
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#fitback">Отзывы</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#footer__soci">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('app_reservations_index') }}" class="nav__button-link">
+                                    <button class="nav__button">Бронирование</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header__body">
+                <div class="header__body-bac">
+                    <h1 class="header__body-heading">«Зов тайги»</h1>
+                    <div class="header__body-subtitle">Погрузитесь в мир дикой природы, не жертвуя комфортом.
+                    </div>
+                    <div class="booking-form">
+                        <div class="form-group">
+                            <label for="date-range">Дата заезда - выезда</label>
+                            <input type="text" id="date-range" placeholder="Выберите даты">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Количество гостей</label>
+                            <input type="number" id="guests" min="1" placeholder="1 гость">
+                        </div>
+                        <a id="search-button" href="{{ path('app_reservations_index') }}">Показать наличие</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main__wrap" id="main__wrap-about">
+            <div class="container">
+                <div class="main__grid">
+                    <h1 class="main__title">О нас</h1>
+                    <div class="main__grid-inner">
+                        <img src="{{ asset('img/home__inner.jpg') }}" class="main__grid-img" alt="">
+                    </div>
+                </div>
+                <div class="main__head">
+                    <div class="main__head-wrap">
+                        <div class="main__subtitle">Мы предлагаем уединённый отдых в гармонии с
+                            природой чистый воздух, живописные пейзажи и новый <br> уровень релакса.
+                        </div>
+                        <div class="main__subtitle-bottom">
+                            Наша база отдыха предлагает гостям богатую <br>инфраструктуру,
+                            разнообразные варианты досуга <br> и
+                            высокий уровень сервиса для идеального отдыха <br> в гармонии с природой.
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </main>
+        <div class="container">
+            <section class="about">
+                <div class="about__item">
+                    <img src="{{ asset('img/footbal_1.svg') }}" alt="" class="about__img">
+                    <div class="about__heading"> Игровые площадки</div>
+                    <div class="about__title">На территории есть тренажёрный комплекс под
+                        открытым небом, футбольное поле с искусственным покрытием,
+                        площадки для настольного тенниса
+                    </div>
+                </div>
+                <div class="about__item">
+                    <img src="{{ asset('img/food_1.svg') }}" alt="" class="about__img-food">
+                    <div class="about__heading"> Уникальная кухня</div>
+                    <div class="about__title">Ресторан предлагает блюда европейской кухни,
+                        приготовленные по
+                        традиционным рецептам, а также уникальные авторские блюда,
+                        в том числе из мяса дичи.
+                    </div>
+                </div>
+                <div class="about__item">
+                    <img src="{{ asset('img/fish_1.svg') }}" alt="" class="about__img-fish">
+                    <div class="about__heading">Рыбалка и охота</div>
+                    <div class="about__title">Организуется охота на диких животных и
+                        рыбалка в местном водоёме, с полным сопровождением для гостей.
+                    </div>
+                </div>
+                <div class="about__item">
+                    <img src="{{ asset('img/shore_1.svg') }}" alt="" class="about__img">
+                    <div class="about__heading">Уютные дома</div>
+                    <div class="about__title">Гости могут разместиться в комфортабельных апартаментах на берегу пруда с
+                        зонами отдыха. В некоторых домиках доступны мангальные площадки и русская баня.
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="about__item-subtitle--wrap">
+            <div class="about__item-subtitle">
+                <div class="about__subtitle">Всё, что нужно для качественного семейного отдыха!</div>
+            </div>
+        </div>
+        <section class="leisure">
+            <div class="container">
+                <h1 class="leisure__head">ДОСУГ И РАЗВЛЕЧЕНИЯ</h1>
+                <div class="leisure__wrap">
+                    <div class="leisure__item">
+                        <div class="leisure__item-img">
+                            <img src="{{ asset('img/los.jpg') }}" class="leisure__img" alt="">
+                        </div>
+                        <h2 class="leisure__item-head">Охота</h2>
+                        <div class="leisure__item-title">Главная гордость базы отдыха
+                            «Зов тайги» — просторный вольер
+                            в глубине леса,
+                            где свободно пасутся статные маралы и изящные пятнистые олени.
+                        </div>
+                        <a href="{{ path('app_services_index') }}" class="leisure__item-button">
+                            <div class="leisure__button-title">Подробнее</div>
+                        </a>
+                    </div>
+                    <div class="leisure__item">
+                        <div class="leisure__item-img">
+                            <img src="{{ asset('img/olenu.jpeg') }}" alt="" class="leisure__img">
+                        </div>
+                        <h2 class="leisure__item-head">Выезд к оленям в лес</h2>
+                        <div class="leisure__item-title">Главная достопримечательность базы «Тайга» – просторный лесной
+                            вольер,
+                            где в естественной среде живут благородные маралы и грациозные пятнистые олени.
+                        </div>
+                        <a href="{{ path('app_services_index') }}" class="leisure__item-button">
+                            <div class="leisure__button-title">Подробнее</div>
+                        </a>
+                    </div>
+                    <div class="leisure__item">
+                        <div class="leisure__item-img">
+                            <img src="{{ asset('img/fising.jpg') }}" alt="" class="leisure__img">
+                        </div>
+                        <h2 class="leisure__item-head">Выезд к оленям в лес</h2>
+                        <div class="leisure__item-title"> Забрасывайте удочку в нашем пруду – ловите сколько
+                            угодно карасей и карпов под пение птиц.
+                        </div>
+                        <a href="{{ path('app_services_index') }}" class="leisure__item-button">
+                            <div class="leisure__button-title">Подробнее</div>
+                        </a>
+                    </div>
+                    <div class="leisure__item">
+                        <div class="leisure__item-img">
+                            <img src="{{ asset('img/seek.jpg') }}" alt="" class="leisure__img">
+                        </div>
+                        <h2 class="leisure__item-head">Смотровая за животными</h2>
+                        <div class="leisure__item-title">На наше базе вас ждет
+                            возможность наблюдать за жизнью
+                            оленей и маралов в просторном природном вольере.
+                        </div>
+                        <a href="{{ path('app_services_index') }}" class="leisure__item-button">
+                            <div class="leisure__button-title">Подробнее</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination" id="galery"></div>
+        </section>
+        <div class="container">
+            <h1 class="slider__header">ГАЛЕРЕЯ</h1>
+            <div class="slider">
+                <div class="controls">
+                    <button data-prev><img src="{{ asset('img/strelka_levo.svg') }}" alt="" class="strelka__prev"></button>
+                    <button data-next><img src="{{ asset('img/strelka_levo.svg') }}" alt="" class="strelka__next"></button>
+                </div>
+                <div class="slides">
+                    <div class="slide"><img src="{{ asset('img/slide-1.png') }}" alt="" class="slide__img"></div>
+                    <div class="slide"><img src="{{ asset('img/slide-2.png') }}" alt="" class="slide__img"></div>
+                    <div class="slide"><img src="{{ asset('img/slide-3.png') }}" alt="" class="slide__img"></div>
+                    <div class="slide"><img src="{{ asset('img/slide-4.png') }}" alt="" class="slide__img"></div>
+                    <div class="slide"><img src="{{ asset('img/slide-5.png') }}" alt="" class="slide__img"></div>
+                    <div class="slide"><img src="{{ asset('img/slide-6.png') }}" alt="" class="slide__img"></div>
+                    <div class="slide"><img src="{{ asset('img/slide-7.png') }}" alt="" class="slide__img"></div>
+                    <div class="slide"><img src="{{ asset('img/slide-8.png') }}" alt="" class="slide__img"></div>
+                </div>
+                <div class="pagination" id="fitback"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="slider__header slider__header-p">ОТЗЫВЫ</h1>
+            <div class="slider">
+                <div class="controls">
+                    <button data-prev><img src="{{ asset('img/strelka_levo.svg') }}" class="strelka__prev" alt=""></button>
+                    <button data-next><img src="{{ asset('img/strelka_levo.svg') }}" class="strelka__next" alt=""></button>
+                </div>
+                <div class="slides">
+                    <div class="slide">
+                        <div class="slide__item">
+                            <div class="slide__item-title">Этот уголок природы превзошел все наши ожидания! Уютные
+                                благоустроенные домики, продуманная
+                                инфраструктура и потрясающая атмосфера единения с природой. Особенно запомнилось
+                                утреннее
+                                сафари – мы наблюдали за оленями и косулями в их естественной среде обитания, а вечером
+                                любовались закатом у озера.
+                            </div>
+                            <div class="slide__item-name">Екатерина</div>
+                            <div class="slide__item-date">10 июля 2024 года</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__item">
+                            <div class="slide__item-title">Приехали с семьёй на неделю – и ни разу не пожалели! Домики
+                                новые, с панорамными окнами,
+                                из которых открывается вид на лес. Дети в восторге от веревочного парка и контактного
+                                зоопарка с кроликами и козочками.
+                                Самое неожиданное – ночная экскурсия с фонарями: увидели сову и даже следы лисы! А ещё
+                                здесь есть уникальная фишка – мастер-классы по гончарному делу. Увезли домой самодельные
+                                кружки))
+                                Обслуживание на уровне, персонал всегда поможет. Обязательно вернёмся зимой – говорят,
+                                тут сказочно в снегу!
+                            </div>
+                            <div class="slide__item-name">Сергей</div>
+                            <div class="slide__item-date">5 августа 2023 года</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__item">
+                            <div class="slide__item-title">Искала место, где можно отдохнуть от мегаполиса – нашла
+                                идеал. Камин, пледы, полки
+                                с книгами и полное отсутствие Wi-Fi .На
+                                территории – десятки скворечников с птицами. Для одинокого отдыха – лучше не придумаешь.
+                            </div>
+                            <div class="slide__item-name">Мария</div>
+                            <div class="slide__item-date"> 19 февраля 2024 года</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__item">
+                            <div class="slide__item-title">Приехали на выходные — место оказалось волшебным! Деревянные
+                                домики с панорамными окнами, уютные и чистые.
+                                Правда, матрасы чуть жестковаты для моего вкуса — но это мелочи.
+                                Главное впечатление — утренняя прогулка к оленям! Они подходят совсем близко, можно
+                                фотографировать.
+                                Вечером сидели у костра — дрова принесли по первому требованию.
+                            </div>
+                            <div class="slide__item-name">Алексей</div>
+                            <div class="slide__item-date">12 мая 2022 года</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__item">
+                            <div class="slide__item-title">Рыбалка здесь — просто сказка! С утра наловили окуней, повар
+                                на базе
+                                приготовил из них уху — пальчики оближешь.
+                                Банный комплекс топовый. Но дороги... После дождя наш седан еле пробился — берите
+                                внедорожник.
+                                Особый кайф — ночные посиделки у воды с гитарой. Персонал разрешает засиживаться
+                                допоздна — главное не шуметь.
+                            </div>
+                            <div class="slide__item-name">Михаил</div>
+                            <div class="slide__item-date">18 июня 2023 года</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__item">
+                            <div class="slide__item-title">Отличное место для спокойного отдыха! Чистый уютный домик с
+                                удобной
+                                кроватью и горячей водой. Озеро в 5 минутах ходьбы – купались каждый день. Персонал
+                                приветливый, быстро
+                                решают вопросы. Из минусов – вечером много комаров и слабый интернет. Для любителей
+                                природы – идеально!
+                            </div>
+                            <div class="slide__item-name">Иван</div>
+                            <div class="slide__item-date">15 августа 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination"></div>
+            </div>
+            <div class="button__fitback-wrap">
+                <button class="button__fitback" href="#">
+                    <a class="button__fitback-title">Оставить отзыв</a>
+                </button>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <footer class="footer footer__inner" id="footer__soci">
+        <ul class="footer__list">
+            <li class="footer__item"><a href="#main__wrap-about" class="footer__link">О нас</a></li>
+            <li class="footer__item"><a href="{{ path('app_services_index') }}" class="footer__link">Услуги</a></li>
+            <li class="footer__item"><a href="#galery" class="footer__link">Галерея</a></li>
+            <li class="footer__item"><a href="#fitback" class="footer__link">Отзывы</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Политика конфиденциальности</a></li>
+            <li class="footer__item"><a href="#" class="footer__socials">
+                    <div class="footer__socials-wrap">
+                        <img src="{{ asset('img/tg.svg') }}" class="footer__img-tg" alt="">
+                        <div class="footer__socials-title">Мы в Телеграмм</div>
+                    </div>
+                </a></li>
+            <li class="footer__item"><a href="#" class="footer__socials">
+                    <div class="footer__socials-wrap">
+                        <img src="{{ asset('img/vk.svg') }}" class="footer__img-vk footer__img" alt="">
+                        <div class="footer__socials-title">Мы в Вконтакте</div>
+                    </div>
+                </a></li>
+        </ul>
+    </footer>
+</div>
+<script src="{{ asset('js/sc.js') }}"></script>
+</body>
+</html>

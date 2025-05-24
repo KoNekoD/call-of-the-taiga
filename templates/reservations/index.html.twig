@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css ">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr "></script>
+</head>
+<body>
+<div class="wrapper">
+    <form action="{{ path('app_reservations_action') }}" method="post">
+        <header class="header">
+            <div class="container">
+                <div class="header__nav-wrap">
+                    <nav class="header__nav">
+                        <div class="logo__item">
+                            <a href="{{ path('app_home_index') }}" class="link__logo">
+                                <img src="{{ asset('img/home.svg') }}" alt="logo" class="logo">
+                                <div class="logo__title">ЗОВ ТАЙГИ</div>
+                            </a>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="#main__wrap-about">О нас</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="{{ path('app_services_index') }}">Услуги</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#galery">Галерея</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#fitback">Отзывы</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#footer__soci">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('app_reservations_index') }}" class="nav__button-link">
+                                    <button class="nav__button">Бронирование</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header__body-bron">
+                <h1 class="header__body-heading">«Зов тайги»</h1>
+                <div class="header__body-subtitle">Погрузитесь в мир дикой природы, не жертвуя комфортом.
+                </div>
+                <div class="booking-form">
+                    <div class="form-group">
+                        <label for="date-range">Дата заезда - выезда</label>
+                        <input type="text" id="date-range" name="arrivalDepartureDates" placeholder="Выберите даты">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Количество гостей</label>
+                        <input type="number" id="guests" name="guests" min="1" placeholder="1 гость">
+                    </div>
+                    <a id="search-button" href="{{ path('app_reservations_index') }}">Найти</a>
+                </div>
+            </div>
+        </header>
+        <h1 class="slider__header">БРОНИРОВАНИЕ</h1>
+        <div class="container">
+            <div class="home__head-title">
+                Все категории
+            </div>
+            <div class="home__wrap">
+                <div class="home__item">
+                    <div>
+                        <img src="{{ asset('img/home-1.png') }}" class="home__img" alt="">
+                    </div>
+                    <div class="home__wrap-pad">
+                        <div class="home__head">Дом «Лесной лофт»</div>
+                        <div class="home__subtitle-inner">
+                            <div class="home__subtitle">
+                                <div class="home__subtitle--t"> 250 кв.м</div>
+                            </div>
+                            <a class="home__subtitle-more" href="#">
+                                <div class="home__more-title">Подробнее</div>
+                                <img class="home__more-img" src="{{ asset('img/strelka_levo-green.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="line"></div>
+                        <div class="specs__head">Стандартный</div>
+                        <div class="specs">
+                            <div class="specs__item">
+                                <img src="{{ asset('img/buy.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Полная предоплата</div>
+                            </div>
+                            <div class="specs__item">
+                                <img src="{{ asset('img/otmena.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Нет бесплатной отмены</div>
+                            </div>
+                        </div>
+
+                        <div class="home__specs">
+                            <div class="home__specs-img">
+                                <img src="{{ asset('img/human.png') }}" class="human__img" alt="">
+                                <div class="home__specs-title">x10</div>
+                            </div>
+                            <div class="home__specs-wrap">
+                                <div class="home__specs-head">24 000 ₽</div>
+                                <div class="home__specs-subhead">за 1 ночь</div>
+                            </div>
+                            <input type="submit" class="home__specs-link" name="reservationName" value="forest_loft_house"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="home__item">
+                    <div>
+                        <img src="{{ asset('img/home-2.png') }}" class="home__img" alt="">
+                    </div>
+                    <div class="home__wrap-pad">
+                        <div class="home__head">Дом «Ермак»</div>
+                        <div class="home__subtitle-inner">
+                            <div class="home__subtitle">
+                                <div class="home__subtitle--t"> 210 кв.м</div>
+                            </div>
+                            <a class="home__subtitle-more" href="#">
+                                <div class="home__more-title">Подробнее</div>
+                                <img class="home__more-img" src="{{ asset('img/strelka_levo-green.svg') }}" alt="">
+                            </a>
+                        </div>
+
+                        <div class="line"></div>
+                        <div class="specs__head">Стандартный</div>
+                        <div class="specs">
+                            <div class="specs__item">
+                                <img src="{{ asset('img/buy.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Полная предоплата</div>
+                            </div>
+                            <div class="specs__item">
+                                <img src="{{ asset('img/otmena.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Нет бесплатной отмены</div>
+                            </div>
+                        </div>
+
+                        <div class="home__specs">
+                            <div class="home__specs-img">
+                                <img src="{{ asset('img/human.png') }}" class="human__img" alt="">
+                                <div class="home__specs-title">x8</div>
+                            </div>
+                            <div class="home__specs-wrap">
+                                <div class="home__specs-head">20 000 ₽</div>
+                                <div class="home__specs-subhead">за 1 ночь</div>
+                            </div>
+                            <input type="submit" class="home__specs-link" name="reservationName" value="yermak_house"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__item">
+                    <div>
+                        <img src="{{ asset('img/home-3.png') }}" class="home__img" alt="">
+                    </div>
+                    <div class="home__wrap-pad">
+                        <div class="home__head">Дом «Лесная гавань»</div>
+                        <div class="home__subtitle-inner">
+                            <div class="home__subtitle">
+                                <div class="home__subtitle--t"> 150 кв.м</div>
+                            </div>
+                            <a class="home__subtitle-more" href="#">
+                                <div class="home__more-title">Подробнее</div>
+                                <img class="home__more-img" src="{{ asset('img/strelka_levo-green.svg') }}" alt="">
+                            </a>
+                        </div>
+
+                        <div class="line"></div>
+                        <div class="specs__head">Стандартный</div>
+                        <div class="specs">
+                            <div class="specs__item">
+                                <img src="{{ asset('img/buy.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Полная предоплата</div>
+                            </div>
+                            <div class="specs__item">
+                                <img src="{{ asset('img/otmena.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Нет бесплатной отмены</div>
+                            </div>
+                        </div>
+
+                        <div class="home__specs">
+                            <div class="home__specs-img">
+                                <img src="{{ asset('img/human.png') }}" class="human__img" alt="">
+                                <div class="home__specs-title">x5</div>
+                            </div>
+                            <div class="home__specs-wrap">
+                                <div class="home__specs-head">14 000 ₽</div>
+                                <div class="home__specs-subhead">за 1 ночь</div>
+                            </div>
+                            <input type="submit" class="home__specs-link" name="reservationName" value="house_forest_harbor"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="home__item">
+                    <div>
+                        <img src="{{ asset('img/home-4.png') }}" class="home__img" alt="">
+                    </div>
+                    <div class="home__wrap-pad">
+                        <div class="home__head">Дом «Теплый уголок»</div>
+                        <div class="home__subtitle-inner">
+                            <div class="home__subtitle">
+                                <div class="home__subtitle--t"> 100кв.м</div>
+                            </div>
+                            <a class="home__subtitle-more" href="#">
+                                <div class="home__more-title">Подробнее</div>
+                                <img class="home__more-img" src="{{ asset('img/strelka_levo-green.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="line"></div>
+                        <div class="specs__head">Стандартный</div>
+                        <div class="specs">
+                            <div class="specs__item">
+                                <img src="{{ asset('img/buy.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Полная предоплата</div>
+                            </div>
+                            <div class="specs__item">
+                                <img src="{{ asset('img/otmena.svg') }}" class="human__img" alt="">
+                                <div class="specs__title">Нет бесплатной отмены</div>
+                            </div>
+                        </div>
+
+                        <div class="home__specs">
+                            <div class="home__specs-img">
+                                <img src="{{ asset('img/human.png') }}" class="human__img" alt="">
+                                <div class="home__specs-title">x2</div>
+                            </div>
+                            <div class="home__specs-wrap">
+                                <div class="home__specs-head">11 000 ₽</div>
+                                <div class="home__specs-subhead">за 1 ночь</div>
+                            </div>
+                            <input type="submit" class="home__specs-link" name="reservationName" value="house_warm_corner"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="{{ asset('js/sc.js') }}"></script>
+</body>
+</html>
